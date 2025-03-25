@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 26px;
+}
+
+.search {
+  min-width: 475px;
+}
+
+.addClinicButton {
+  margin-left: auto;
+  width: max-content;
+}
