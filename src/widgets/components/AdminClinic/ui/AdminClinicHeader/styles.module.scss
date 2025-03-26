@@ -4,13 +4,30 @@
   align-items: center;
   gap: 24px;
   padding: 26px;
+
+  flex-wrap: wrap;
 }
 
 .search {
   min-width: 475px;
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
 }
 
 .addClinicButton {
   margin-left: auto;
   width: max-content;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.logoutButton {
+  @media (max-width: 768px) {
+    order: -1;
+    margin-left: auto;
+  }
 }

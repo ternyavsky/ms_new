@@ -1,0 +1,19 @@
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.saveButton {
+  min-width: 452px;
+
+  @media (max-width: 1024px) {
+    min-width: auto;
+  }
+}

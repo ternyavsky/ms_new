@@ -1,0 +1,23 @@
+.content {
+  min-width: 98px;
+  min-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.line {
+  width: 1px;
+  height: 35px;
+  background-color: #efefef;
+}
+
+.statusBadge {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

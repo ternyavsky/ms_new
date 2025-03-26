@@ -1,8 +1,8 @@
 .numberTd {
   width: 40px;
   min-width: 40px;
-  box-shadow: inset 0 0.5px 0 #AEC2DE, inset 0 -0.5px 0 #AEC2DE, inset 0.5px 0 0 #AEC2DE,
-  inset -0.5px 0 0 #AEC2DE;
+  box-shadow: inset 0 0.5px 0 #aec2de, inset 0 -0.5px 0 #aec2de,
+    inset 0.5px 0 0 #aec2de, inset -0.5px 0 0 #aec2de;
 
   &:nth-child(odd) {
     background-color: #ebf3ff;
@@ -14,4 +14,9 @@
     width: 40px;
     min-width: 40px;
   }
+}
+
+.statusBadge {
+  margin: auto;
+  cursor: pointer;
 }

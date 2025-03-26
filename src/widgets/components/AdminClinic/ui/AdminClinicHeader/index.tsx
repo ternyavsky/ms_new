@@ -12,9 +12,13 @@ export const AdminClinicHeader: FC<PropsWithClassName> = ({ className }) => {
     <header className={cn(styles.header, className)}>
       <AdminClinicFilters />
 
-      <Button className={styles.addClinicButton} styleType="outline" title="Добавить клинику +" />
+      <Button
+        className={styles.addClinicButton}
+        styleType="outline"
+        title="Добавить клинику +"
+      />
       <Search className={styles.search} />
-      <LogoutButton />
+      <LogoutButton className={styles.logoutButton} />
     </header>
   );
 };

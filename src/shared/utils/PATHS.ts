@@ -224,6 +224,11 @@ export const ROUTES = {
     path: "/clinic-registration",
     label: "Регистрация клиники",
   },
+
+  clinicServicesPage: {
+    path: "/clinic-services",
+    label: "Услуги клиники",
+  },
 } as const;
 
 export const pagesTitles: { [key: string]: string } = {
@@ -252,4 +257,5 @@ export const pagesTitles: { [key: string]: string } = {
   "/clinic-profile": ROUTES.clinicProfile.label,
   "/clinic-profile-stats": ROUTES.clinicProfileStats.label,
   "/clinic-registration": ROUTES.clinicRegistrationPage.label,
+  "/clinic-services": ROUTES.clinicServicesPage.label,
 };

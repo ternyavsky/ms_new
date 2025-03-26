@@ -27,3 +27,4 @@ export * from "./LocationIcon";
 export * from "./SaveIcon";
 export * from "./TelegramIcon";
 export * from "./LogoutIcon";
+export * from "./PlusIcon";

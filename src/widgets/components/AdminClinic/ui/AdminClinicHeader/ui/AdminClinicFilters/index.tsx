@@ -2,16 +2,17 @@ import { PropsWithClassName } from "@/shared/types";
 import cn from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./styles.module.scss";
-import { Button, Select } from "@/shared/ui";
+import { Select } from "@/shared/ui";
 
 export const AdminClinicFilters: FC<PropsWithChildren<PropsWithClassName>> = ({
   className,
 }) => {
   return (
     <div className={cn(styles.filters, className)}>
-      <Select placeholder="Клиники" options={[]} />
+      <Select className={styles.select} placeholder="Клиники" options={[]} />
 
       <Select
+        className={styles.select}
         placeholder="Записи"
         options={[
           { value: "process", label: "В процессе" },
@@ -24,6 +25,7 @@ export const AdminClinicFilters: FC<PropsWithChildren<PropsWithClassName>> = ({
       />
 
       <Select
+        className={styles.select}
         placeholder="СМС"
         options={[
           {

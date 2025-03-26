@@ -1,0 +1,42 @@
+.popover {
+  position: relative;
+  display: inline-block;
+}
+
+.popoverTrigger {
+  cursor: pointer;
+}
+
+.popoverContent {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 10;
+}
+
+.popoverButton {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 12px;
+  font-size: 16px;
+  color: #121212;
+  transition: all 0.2s ease;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #ebf3ff;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
