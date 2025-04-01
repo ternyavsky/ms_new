@@ -1,0 +1,9 @@
+.control {
+  height: 54px;
+  padding: 0 20px;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    padding: 10px 14px;
+  }
+}

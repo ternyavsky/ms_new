@@ -87,6 +87,7 @@ const ClinicRegistrationPage = lazy(
   () => import("@/pages/ClinicRegistrationPage")
 );
 const ClinicServicesPage = lazy(() => import("@/pages/ClinicServicesPage"));
+const ClinicSmsPage = lazy(() => import("@/pages/ClinicSmsPage"));
 
 export const routes: RouteProps[] = [
   {
@@ -302,5 +303,10 @@ export const routes: RouteProps[] = [
   {
     path: ROUTES.clinicServicesPage.path,
     Component: ClinicServicesPage,
+  },
+
+  {
+    path: ROUTES.clinicSmsPage.path,
+    Component: ClinicSmsPage,
   },
 ];

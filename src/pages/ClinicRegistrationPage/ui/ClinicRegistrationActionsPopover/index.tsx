@@ -15,7 +15,7 @@ export const ClinicRegistrationActionsPopover: FC<
     <Popover>
       <PopoverTrigger>{children}</PopoverTrigger>
       <PopoverContent className={cn(className)}>
-        <PopoverButton>Зарегистрировать</PopoverButton>
+        <PopoverButton>Изменить</PopoverButton>
         <PopoverButton>Отменить</PopoverButton>
       </PopoverContent>
     </Popover>

@@ -9,12 +9,16 @@ export const Select: FC<PropsWithClassName<ISelectProps>> = ({
   className,
   options,
   placeholder,
+  controlIcon,
 }) => {
   return (
     <ReactSelect
       className={cn(styles.select, className)}
       options={options}
-      components={{ SingleValue }}
+      components={{
+        SingleValue,
+        Control: (props) => <Control {...props} icon={controlIcon} />,
+      }}
       placeholder={placeholder}
     />
   );
@@ -29,5 +33,25 @@ const SingleValue: FC<PropsWithClassName<ISingleValueProps>> = (props) => {
       {props.data.icon}
       {props.data.label}
     </components.SingleValue>
+  );
+};
+
+const Control: FC<{ icon?: string } & any> = ({ icon, children, ...props }) => {
+  return (
+    <components.Control
+      {...props}
+      className={cn(styles.control, props.className)}
+    >
+      {icon && (
+        <>
+          {typeof icon === "string" ? (
+            <img src={icon} alt="icon" className={styles.icon} />
+          ) : (
+            icon
+          )}
+        </>
+      )}
+      {children}
+    </components.Control>
   );
 };

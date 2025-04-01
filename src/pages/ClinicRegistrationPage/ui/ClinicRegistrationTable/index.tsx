@@ -9,10 +9,17 @@ import { StatusBadge } from "@/widgets/components/StatusBadge";
 import { TableButton } from "@/shared/ui/Table/ui/TableButton";
 import { ClinicRegistrationActionsPopover } from "../ClinicRegistrationActionsPopover";
 import { AdminClinicStatusPopover } from "@/widgets/components/AdminClinic/ui/AdminClinicStatusPopover";
+import { FC } from "react";
+import { PropsWithClassName } from "@/shared/types";
+import { IClinicRegistrationTableProps } from "./types";
+import cn from "clsx";
+import { formatDate } from "@/shared/utils";
 
-export const ClinicRegistrationTable = () => {
+export const ClinicRegistrationTable: FC<
+  PropsWithClassName<IClinicRegistrationTableProps>
+> = ({ className, list }) => {
   return (
-    <Table>
+    <Table className={cn(className)}>
       <Thead>
         <Row>
           {tableTitles.map((title) => (
@@ -23,48 +30,62 @@ export const ClinicRegistrationTable = () => {
         </Row>
       </Thead>
       <TBody>
-        {new Array(10).fill(1).map((_, index) => (
+        {list.map((clinic, index) => (
           <Row key={index}>
-            <Cell className={styles.numberTd}>1</Cell>
-            <Cell>Хелликс</Cell>
-            <Cell>Клиника</Cell>
-            <Cell>Август 2012 г</Cell>
-            <Cell>36 км²</Cell>
-            <Cell>+ 7 (999) 03-20-911</Cell>
-            <Cell>+ 7 (999) 03-20-911</Cell>
-            <Cell>Палестина</Cell>
-            <Cell>Абу-Даби</Cell>
-            <Cell>ул: Чурки 12</Cell>
-            <Cell>12</Cell>
+            <Cell className={styles.numberTd}>{clinic.id}</Cell>
+            <Cell>{clinic.title}</Cell>
+            <Cell>{clinic.typeTitle}</Cell>
+            <Cell>{formatDate(new Date(clinic.createdAt))}</Cell>
+            <Cell>{clinic.detail.square || "-"} км²</Cell>
+            <Cell>{clinic.detail.registryNumber}</Cell>
+            <Cell>{clinic.detail.registryNumber}</Cell>
+            <Cell>{clinic.country.name}</Cell>
+            <Cell>{clinic.city as unknown as string}</Cell>
+            <Cell>{clinic.address}</Cell>
+            <Cell>{clinic.detail.numberOfFloors || 0}</Cell>
             <Cell>
               <AdminClinicStatusPopover>
-                <StatusBadge className={styles.statusBadge} type="success" />
+                <StatusBadge
+                  className={styles.statusBadge}
+                  type={clinic.detail.computerHave ? "success" : "error"}
+                />
               </AdminClinicStatusPopover>
             </Cell>
             <Cell>
               <AdminClinicStatusPopover>
-                <StatusBadge className={styles.statusBadge} type="success" />
+                <StatusBadge
+                  className={styles.statusBadge}
+                  type={clinic.detail.internetHave ? "success" : "error"}
+                />
               </AdminClinicStatusPopover>
             </Cell>
             <Cell>
-              пн 8:00 -17:00 <br />
-              сб-вс 8:00 -14:00
+              пн {clinic.detail.mondayTime || " - "} <br />
+              вт {clinic.detail.tuesdayTime || " - "} <br />
+              ср {clinic.detail.wednesdayTime || " - "} <br />
+              чт {clinic.detail.thursdayTime || " - "} <br />
+              пт {clinic.detail.fridayTime || " - "} <br />
+              сб {clinic.detail.saturdayTime || " - "} <br />
+              вс {clinic.detail.sundayTime || " - "}
             </Cell>
-            <Cell>3</Cell>
-            <Cell>24</Cell>
+            <Cell> - </Cell>
+            <Cell> - </Cell>
             <Cell>
-              <TableButton>4</TableButton>
+              <TableButton> - </TableButton>
             </Cell>
-            <Cell>Английский Русский</Cell>
+            <Cell>{clinic.detail.language}</Cell>
             <Cell>
               <AdminClinicStatusPopover>
-                <StatusBadge className={styles.statusBadge} type="success" />
+                <StatusBadge
+                  className={styles.statusBadge}
+                  type={clinic.detail.elevatorHave ? "success" : "error"}
+                />
               </AdminClinicStatusPopover>
             </Cell>
-            <Cell>5 / 130</Cell>
-            <Cell>12 / 130</Cell>
+            <Cell>{clinic.detail.totalServices}</Cell>
+            <Cell>{clinic.detail.totalDoctors}</Cell>
             <Cell>
-              <TableButton>3</TableButton>
+              <TableButton> - </TableButton>
             </Cell>
             <Cell>
               <ClinicRegistrationActionsPopover>

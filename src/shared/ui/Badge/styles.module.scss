@@ -1,0 +1,29 @@
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: max-content;
+}
+
+.badge-default {
+  background-color: #f1f1ef;
+  color: #1d2226;
+}
+
+.badge-error {
+  background-color: #ffe1e1;
+  color: #1d2226;
+}
+
+.badge-lg {
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.badge-sm {
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 6px;
+}

@@ -229,6 +229,11 @@ export const ROUTES = {
     path: "/clinic-services",
     label: "Услуги клиники",
   },
+
+  clinicSmsPage: {
+    path: "/clinic-sms", 
+    label: "Смс клиники"
+  }
 } as const;
 
 export const pagesTitles: { [key: string]: string } = {

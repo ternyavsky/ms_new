@@ -9,6 +9,7 @@ export interface Option {
 export interface ISelectProps {
   options: Option[];
   placeholder?: string;
+  controlIcon?: JSX.Element | string;
 }
 
 export interface ISingleValueProps extends SingleValueProps<Option> {

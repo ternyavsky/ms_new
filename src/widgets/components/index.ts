@@ -28,3 +28,4 @@ export * from "./RecordFiles";
 export * from "./RecordStats";
 export * from "./RecordDoctors";
 export * from "./ClinicProfileStats";
+export * from "./EmptyText";
