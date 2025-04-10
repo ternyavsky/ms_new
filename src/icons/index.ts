@@ -28,3 +28,6 @@ export * from "./SaveIcon";
 export * from "./TelegramIcon";
 export * from "./LogoutIcon";
 export * from "./PlusIcon";
+export * from "./ExitIcon";
+export * from "./CloseIcon";
+export * from "./CheckIcon";

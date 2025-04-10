@@ -1,0 +1,13 @@
+.confirmModalFooter {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+
+  button {
+    flex-grow: 1;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}

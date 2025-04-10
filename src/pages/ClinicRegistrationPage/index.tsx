@@ -3,27 +3,36 @@ import { ClinicRegistrationTable } from "./ui/ClinicRegistrationTable";
 import styles from "./styles.module.scss";
 import { useQuery } from "react-query";
 import { getClinics } from "@/shared/api";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { EmptyText } from "@/widgets/components";
 import { AdminClinicLayout } from "@/widgets/components/AdminClinic/ui/AdminClinicLayout";
 import { useDebounce } from "use-debounce";
+import { IClinic } from "@/shared/types";
 
-const limit = 50;
+const limit = 500;
 
 const ClinicRegistrationPage = () => {
-  const [offset, setOffset] = useState(0);
+  const [offset] = useState(0);
   const [search, setSearch] = useState("");
   const [searchDebounce] = useDebounce(search, 1000);
+  const [clinics, setClinics] = useState<IClinic[]>([]);
 
   const { data: clinicsData } = useQuery({
     queryKey: ["clinics"],
     queryFn: () => getClinics(limit, offset),
   });
 
-  const filteredClinics =
-    clinicsData?.data.clinics.filter((clinic) =>
+  const filteredClinics = useMemo(() => {
+    return clinics.filter((clinic) =>
       clinic.name.toLowerCase().includes(searchDebounce.toLowerCase())
-    ) || [];
+    );
+  }, [clinics, searchDebounce]);
+
+  useEffect(() => {
+    if (!clinicsData) return;
+
+    setClinics(clinicsData.data.clinics);
+  }, [clinicsData]);
 
   const onChangeSearch = (value: string) => {
     setSearch(value);
