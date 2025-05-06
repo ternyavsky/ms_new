@@ -215,11 +215,6 @@ export const ROUTES = {
     label: "Профиль клиники",
   },
 
-  clinicProfileStats: {
-    path: "/clinic-profile-stats",
-    label: "Профиль клиники",
-  },
-
   clinicRegistrationPage: {
     path: "/clinic-registration",
     label: "Регистрация клиники",
@@ -231,9 +226,9 @@ export const ROUTES = {
   },
 
   clinicSmsPage: {
-    path: "/clinic-sms", 
-    label: "Смс клиники"
-  }
+    path: "/clinic-sms",
+    label: "Смс клиники",
+  },
 } as const;
 
 export const pagesTitles: { [key: string]: string } = {
@@ -260,7 +255,6 @@ export const pagesTitles: { [key: string]: string } = {
   "/personal-statistics": ROUTES.personalStatistics.label,
   "/record": ROUTES.record.label,
   "/clinic-profile": ROUTES.clinicProfile.label,
-  "/clinic-profile-stats": ROUTES.clinicProfileStats.label,
   "/clinic-registration": ROUTES.clinicRegistrationPage.label,
   "/clinic-services": ROUTES.clinicServicesPage.label,
 };

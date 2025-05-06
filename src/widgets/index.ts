@@ -10,7 +10,6 @@ import { ErrorBoundaryFallback } from "./components/ErrorBoundaryFallback/ErrorB
 import { MobileComment } from "./components/MobileComment/MobileComment";
 import { ParamsBlock } from "./components/ParamsBlock/ParamsBlock";
 import { SearchResultBlock } from "./components/SearchResultBlock/SearchResultBlock";
-import { ReminderBlock } from "./components/ReminderBlock";
 import { LoginForPersonal } from "./components/Auth/LoginForPersonal/LoginForPersonal";
 import { Interview } from "./components/Auth/Interview/Interview";
 import { SmallDropbox } from "./components/SmallDropbox/SmallDropbox";
@@ -20,7 +19,7 @@ import { SelectCenterMap } from "./components/SelectCenterMap/SelectCenterMap";
 import { PersonalCard } from "./components/PersonalCard/PersonalCard";
 import { ConnectionModal } from "./components/ConnectionModal/ConnectionModal";
 import { DiseaseInfo } from "./components/DiseaseInfo/DiseaseInfo";
-import { AdminPanelContainer } from "./components/AdminPanelContainer/AdminPanelContainer";
+import { AdminPanelContainer } from "./components/AdminPanelContainer";
 import { RequestBlock } from "./components/RequestBlock/RequestBlock";
 import { MailLayout } from "./components/MailLayout/MailLayout";
 import { MailHeader } from "./components/MailHeader/MailHeader";
@@ -45,7 +44,6 @@ export {
   MobileComment,
   ParamsBlock,
   SearchResultBlock,
-  ReminderBlock,
   RegistrationForPersonal,
   LoginForPersonal,
   Interview,

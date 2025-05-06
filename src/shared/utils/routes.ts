@@ -8,13 +8,9 @@ import MapPage from "@/pages/Map/MapPage";
 const RegistrationClinicPage = lazy(
   () => import("@/pages/RegistrationClinicPage")
 );
-const AdminPage = lazy(() => import("@/pages/AdminPage"));
-const AdminPageAddClinic = lazy(() => import("@/pages/AdminPageAddCLinic"));
 const RegistrationPage = lazy(() => import("@/pages/RegistrationPage"));
-const DoctorPage = lazy(() => import("@/pages/DoctorPage"));
 const WorkerLoginPage = lazy(() => import("@/pages/WorkerLoginPage"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
-const DoctorsPage = lazy(() => import("@/pages/DoctorsPage"));
 const MainPage = lazy(() => import("@/pages/Main"));
 const RecoveryPage = lazy(() => import("@/pages/RecoveryPage"));
 const SelectCenterPage = lazy(() => import("@/pages/SelectCenter"));
@@ -34,55 +30,32 @@ const MobileNotificationPage = lazy(
 const UserInfoPage = lazy(() => import("@/pages/UserInfo"));
 const UsersPage = lazy(() => import("@/pages/Users/UsersPage"));
 const BalancePage = lazy(() => import("@/pages/Balance"));
-const AbountCenterPage = lazy(
-  () => import("@/pages/AboutCenter/AboutCenterPage")
-);
 const AppStatsPage = lazy(() => import("@/pages/AppStatsPage"));
 const LeadsPage = lazy(() => import("@/pages/LeadsPage"));
-// const AdminPanelMapPage = lazy(() => import("@/pages/AdminPanelMap"));
 const CountryInfoPage = lazy(() => import("@/pages/CountryInfo"));
 const CityInfoPage = lazy(() => import("@/pages/CityInfoPage"));
-const RequestsPage = lazy(() => import("@/pages/RequestsPage"));
 const MailPage = lazy(() => import("@/pages/MailPage"));
 const SocialPage = lazy(() => import("@/pages/SocialPage"));
-const ChatPage = lazy(() => import("@/pages/ChatPage"));
 const CenterAccount = lazy(() => import("@/pages/CenterAccount"));
 const AppointmentsPage = lazy(() => import("@/pages/AppointmentsPage"));
 const MedicalCenter = lazy(() => import("@/pages/MedicalCenter"));
 const SubsPage = lazy(() => import("@/pages/SubsPage"));
 const SavedPage = lazy(() => import("@/pages/SavedPage"));
-const AccessPage = lazy(() => import("@/pages/AccessPage"));
 const CenterPage = lazy(() => import("@/pages/CenterPage"));
 const GeolocationPage = lazy(() => import("@/pages/GeolocationPage"));
-const AccountPage = lazy(() => import("@/pages/AccountPage"));
 const SettingsPage = lazy(() => import("@/pages/SettingsPage"));
 const StatisticsPage = lazy(() => import("@/pages/StatisticsPage"));
-const ChatMoreDetailed = lazy(() => import("@/pages/ChatMoreDetailed"));
-const ClinicPage = lazy(() => import("@/pages/ClinicPage"));
-const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
 const ServicePage = lazy(() => import("@/pages/ServicePage"));
-const PaymentsPage = lazy(() => import("@/pages/PaymentsPage"));
-const AddCardPage = lazy(() => import("@/pages/AddCard"));
 const CooperationPage = lazy(() => import("@/pages/CooperationPage"));
 const HardwarePage = lazy(() => import("@/pages/HardwarePage"));
 const AllDoctorsPage = lazy(() => import("@/pages/AllDoctorsPage"));
 const MedTasksPage = lazy(() => import("@/pages/MedTasksPage"));
 const OverviewMedTaskPage = lazy(() => import("@/pages/OverviewMedTaskPage"));
-const HistoryPatientPage = lazy(() => import("@/pages/HistoryPatientPage"));
 const DiagnosisPage = lazy(() => import("@/pages/DiagnosisPage"));
 const CreateMedTaskPage = lazy(() => import("@/pages/CreateMedTaskPage"));
 const ConfirmationCodePage = lazy(() => import("@/pages/ConfirmationCodePage"));
 const NewsPage = lazy(() => import("@/pages/NewsPage"));
-const RecommendationsPage = lazy(() => import("@/pages/RecommendationsPage"));
-const CalendarPage = lazy(() => import("@/pages/CalendarPage"));
-const PersonalStatisticsPage = lazy(
-  () => import("@/pages/PersonalStatisticsPage")
-);
-const RecordPage = lazy(() => import("@/pages/RecordPage"));
 const ClinicProfilePage = lazy(() => import("@/pages/ClinicProfilePage"));
-const ClinicProfileStatsPage = lazy(
-  () => import("@/pages/ClinicProfileStatsPage")
-);
 const ClinicRegistrationPage = lazy(
   () => import("@/pages/ClinicRegistrationPage")
 );
@@ -115,14 +88,6 @@ export const routes: RouteProps[] = [
   {
     path: "/interview",
     Component: InterviewPage,
-  },
-  {
-    path: "/gZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMgYIAhAjGCcyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyBwgGEAAYgA",
-    Component: AdminPage,
-  },
-  {
-    path: "/gZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMgYIAhAjGCcyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyBwgGEAAYgA/add",
-    Component: AdminPageAddClinic,
   },
   {
     path: "/search",
@@ -174,16 +139,8 @@ export const routes: RouteProps[] = [
   },
 
   {
-    path: "/about-center",
-    Component: AbountCenterPage,
-  },
-  {
     path: "/center/:id",
     Component: CenterPage,
-  },
-  {
-    path: "/doctor/:id",
-    Component: DoctorPage,
   },
   { path: "/app", Component: AppStatsPage },
   { path: "/leads", Component: LeadsPage },
@@ -196,28 +153,18 @@ export const routes: RouteProps[] = [
     path: "/map/:country/:city",
     Component: CityInfoPage,
   },
-  { path: "/requests", Component: RequestsPage },
-  { path: "/doctors", Component: DoctorsPage },
-  { path: "/services", Component: ServicesPage },
   { path: "/services/:id/", Component: ServicePage },
   { path: "/mail", Component: MailPage },
   { path: "/news", Component: NewsPage },
   { path: "/social", Component: SocialPage },
-  { path: "/messages/chat/:id/", Component: ChatPage },
   { path: "/center-account", Component: CenterAccount },
   { path: "/appointments", Component: AppointmentsPage },
   { path: "/medical-center", Component: MedicalCenter },
   { path: "/subscriptions", Component: SubsPage },
   { path: "/saved", Component: SavedPage },
-  { path: "/access", Component: AccessPage },
   { path: "/geolocation", Component: GeolocationPage },
-  { path: "/account", Component: AccountPage },
   { path: "/settings", Component: SettingsPage },
   { path: "/statistics", Component: StatisticsPage },
-  { path: "/chat-more-detailed", Component: ChatMoreDetailed },
-  { path: "/clinic/:id", Component: ClinicPage },
-  { path: "/payments", Component: PaymentsPage },
-  { path: "/add-card", Component: AddCardPage },
   {
     path: ROUTES.cooperation.path,
     Component: CooperationPage,
@@ -239,11 +186,6 @@ export const routes: RouteProps[] = [
     path: ROUTES.overviewMedTask.path,
     Component: OverviewMedTaskPage,
   },
-
-  {
-    path: ROUTES.history.path,
-    Component: HistoryPatientPage,
-  },
   {
     path: ROUTES.pacientDiagnosis.path,
     Component: DiagnosisPage,
@@ -252,38 +194,8 @@ export const routes: RouteProps[] = [
 
   { path: ROUTES.confirmationCode.path, Component: ConfirmationCodePage },
   {
-    path: ROUTES.recommendations.path,
-    Component: RecommendationsPage,
-  },
-
-  {
-    path: ROUTES.calendar.path,
-    Component: CalendarPage,
-  },
-
-  {
-    path: ROUTES.services.path,
-    Component: ServicesPage,
-  },
-
-  {
-    path: ROUTES.personalStatistics.path,
-    Component: PersonalStatisticsPage,
-  },
-
-  {
-    path: ROUTES.record.path,
-    Component: RecordPage,
-  },
-
-  {
     path: ROUTES.clinicProfile.path,
     Component: ClinicProfilePage,
-  },
-
-  {
-    path: ROUTES.clinicProfileStats.path,
-    Component: ClinicProfileStatsPage,
   },
   {
     path: ROUTES.clinicRegistration.path,

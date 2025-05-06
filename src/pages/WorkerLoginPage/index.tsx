@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import { AuthContainer } from "@/shared/ui/AuthContainer";
-import { UserLogin } from "@/features/UserLogin";
 import { Row } from "@/shared/ui/Row";
 import { Text } from "@/shared/ui/Text";
 import { AuthWithApple } from "@/features/AuthWithApple";
